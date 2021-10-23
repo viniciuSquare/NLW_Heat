@@ -1,4 +1,5 @@
 import {Request, Response } from "express";
+import { io } from "../app";
 import { CreateMessageService } from "../services/CreateMessageService";
 
 class CreateMessageController {
@@ -9,6 +10,8 @@ class CreateMessageController {
     const service = new CreateMessageService();
 
     const result = await service.execute(message, user_id);
+
+    io.emit("")
 
     return response.json(result);
 
