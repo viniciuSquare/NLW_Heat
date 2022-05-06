@@ -15,7 +15,7 @@ class GetLastThreeMessagesService {
 
     // SELECT * FROM MESSAGES LIMIT 3 ORDER BY CREATED_AT DESC
 
-    return { messages }
+    return messages
   }
 }
 
